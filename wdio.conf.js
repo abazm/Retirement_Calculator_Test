@@ -22,10 +22,8 @@ exports.config = {
   },
 
   specs: [
-    './test/Retirement_Calculator_SSN_No.js',
+    './test/specs/Retirement_Calculator_with_POM.js',
     // 'test/specs/*.js',
-    // 'test/specs/firstTest.js',
-    // 'test/specs/windowsFrames.js'
 
   ],
   // Patterns to exclude.
@@ -112,6 +110,7 @@ exports.config = {
   // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
   // gets prepended directly.
   baseUrl: 'https://www.securian.com',
+
   //
   // Default timeout for all waitFor* commands.15=>  10
   waitforTimeout: 10000,

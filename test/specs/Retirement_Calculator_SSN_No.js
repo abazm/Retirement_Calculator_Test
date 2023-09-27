@@ -25,14 +25,6 @@ describe('Retirement Calculator Automation Testing', async () => {
     testData.forEach(({ current_age, retirement_age, current_income, spouse_income, current_total_savings,
         current_annual_savings, savings_increase_rate }) => {
         it('Pre-retirement calculation Without SSN Benefits and Default Calculator', async () => {
-            //Setting up implicit timeout 
-            await browser.setTimeout({ 'implicit': 10000 })
-
-            //Open Pre-retirement calculator Securian web application
-            await browser.url("/insights-tools/retirement-calculator.html")
-            console.log("Navigating to Pre-retirement calculator Securian web application")
-            await browser.maximizeWindow()
-            console.log(await browser.getTitle())
             
             //Verify web application Title as expected
             await expect(browser).toHaveTitleContaining("How Much to Save for Retirement | Securian Financial")
