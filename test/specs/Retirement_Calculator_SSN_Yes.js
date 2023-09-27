@@ -29,11 +29,13 @@ describe('Retirement Calculator Automation Testing', async () => {
             //Verify web application Title as expected
             await expect(browser).toHaveTitleContaining("How Much to Save for Retirement | Securian Financial")
             await browser.saveScreenshot("screenshots/TC1/MainPage.png")
-            
+
+            //Filling the required fields in the retirement calc form
             await $("#current-age").setValue(current_age)
             await $("#retirement-age").setValue(retirement_age)
             await $("#current-income").click()
             await $("#current-income").setValue(current_income)
+
             await $("#spouse-income").click()
             await $("#spouse-income").setValue(spouse_income)
             await $("#current-total-savings").click()
