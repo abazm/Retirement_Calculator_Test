@@ -5,10 +5,10 @@ class GenericActions {
         element.click()
     }
 
-    async doSetValue(element, value){
-        await element.waitForDisplayed()
-        await element.click()
-        await element.setValue(value)
+    doSetValue(element, value){
+         element.waitForDisplayed()
+         element.click()
+         element.setValue(value)
     }
 
     doGetText(element){
