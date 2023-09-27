@@ -18,6 +18,10 @@
 		
 Test Screenshots:
 	/Retirement_Calc/Screenshots
+
+Test Report/Results Folders Auto generated:
+/Retirement_Calc/allure-reports
+/Retirement_Calc/allure-results
 	
 To Run Parallel Tests:	
 	Update wdio.conf.js value Maxinstances:number of test to run 
