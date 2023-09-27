@@ -6,7 +6,6 @@
         "test": "npx wdio run wdio.conf.js",
         "suite": "npx wdio run wdio.conf.js -- suite creditCard",
         "GenerateReport": "allure generate allure-results --clean && allure open",
-        "UATRegression": "npx wdio run wdio.uat.conf.js"
     },
     "devDependencies": {
         "@wdio/cli": "^7.32.4",
