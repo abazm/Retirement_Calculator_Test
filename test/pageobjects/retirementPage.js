@@ -107,8 +107,8 @@ class RetirementPage {
     async VerifyResultMessage(result_message) {
         console.log("Verifying Result Message")
         await browser.pause("3000")
+        await console.log(await this.resultmessage.getText())
         await expect(this.resultmessage).toHaveTextContaining(result_message)
-
     }
 
     async TakeScreeshot(screenshotname) {

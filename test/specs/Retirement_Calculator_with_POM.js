@@ -45,7 +45,7 @@ describe('POM - Retirement Calculator Automation Testing', async () => {
 
             await RetirementPage.Submit_Calculate()
 
-            //Verifying Final Result Message
+            //Verifying Final Result Message assertion
             await RetirementPage.VerifyResultMessage(tData.RESULT_MESSAGE)
             await RetirementPage.TakeScreeshot("Final_Result_Message")
 
