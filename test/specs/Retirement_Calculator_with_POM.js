@@ -31,6 +31,7 @@ describe('POM - Retirement Calculator Automation Testing', async () => {
 
             //Verify web application Title as expected            
              await RetirementPage.VerifyPageTitle(tData.LOGIN_PAGE_TITLE)
+
              await RetirementPage.Enter_currentage(current_age)
              await RetirementPage.Enter_retirementage(retirement_age)
              await RetirementPage.Enter_currentincome(current_income)
@@ -44,7 +45,8 @@ describe('POM - Retirement Calculator Automation Testing', async () => {
              await RetirementPage.Select_nosocialbenefit()
 
              await RetirementPage.Submit_Calculate()
-
+            
+             // Verify Result Message
              assert.equal(true, RetirementPage.VerifyResultMessage(tData.RESULT_MESSAGE), 'Result message not Displayed')
              await RetirementPage.TakeScreeshot("Final_Result_Message")
 

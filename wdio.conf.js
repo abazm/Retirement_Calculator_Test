@@ -22,8 +22,8 @@ exports.config = {
   },
 
   specs: [
-    './test/specs/Retirement_Calculator_with_POM.js',
-    // 'test/specs/*.js',
+    './test/specs/*.js',
+    // 'test/specs/Retirement_Calculator_SSN_Yes.js',
 
   ],
   // Patterns to exclude.
