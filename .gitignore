@@ -1,4 +1,4 @@
 node_modules
 package-lock.json
-.allure-results/
-.allure-report/
+allure-results/
+allure-report/
