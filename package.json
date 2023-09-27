@@ -5,7 +5,7 @@
     "scripts": {
         "test": "npx wdio run wdio.conf.js",
         "suite": "npx wdio run wdio.conf.js -- suite creditCard",
-        "GenerateReport": "allure generate allure-results --clean && allure open",
+        "GenerateReport": "allure generate allure-results --clean && allure open"
     },
     "devDependencies": {
         "@wdio/cli": "^7.32.4",
