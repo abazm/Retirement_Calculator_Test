@@ -23,7 +23,7 @@ class RetirementPage {
         return $("#current-total-savings")
     }
 
-    get currentannualsavings(){
+    get currentannualsavings() {
         return $("#current-annual-savings")
     }
 
@@ -100,20 +100,21 @@ class RetirementPage {
 
     }
 
-    async isResultMessageDisplayed(){
+    async isResultMessageDisplayed() {
         await GenericActions.doIsDisplayed(this.resultmessage)
     }
 
     async VerifyResultMessage(result_message) {
         console.log("Verifying Result Message")
-        await this.resultmessage.toHaveTextContaining(result_message)
+        await browser.pause("3000")
+        await expect(this.resultmessage).toHaveTextContaining(result_message)
 
     }
 
     async TakeScreeshot(screenshotname) {
         await browser.pause("3000")
         console.log("Screenshot Captured")
-        await browser.saveScreenshot("screenshots/POM_TC/"+screenshotname+".png")
+        await browser.saveScreenshot("screenshots/POM_TC/" + screenshotname + ".png")
 
     }
 

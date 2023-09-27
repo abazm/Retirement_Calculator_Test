@@ -1,28 +1,28 @@
 class GenericActions {
 
-    doClick(element){
-        element.waitForDisplayed()
-        element.click()
+   async doClick(element){
+       await element.waitForDisplayed()
+       await element.click()
     }
 
-    doSetValue(element, value){
-         element.waitForDisplayed()
-         element.click()
-         element.setValue(value)
+    async doSetValue(element, value){
+         await element.waitForDisplayed()
+         await element.click()
+         await element.setValue(value)
     }
 
-    doGetText(element){
-        element.waitForDisplayed()
+    async doGetText(element){
+        await element.waitForDisplayed()
         return element.getText()
     }
 
-    doIsDisplayed(element){
-        element.waitForDisplayed()
+    async doIsDisplayed(element){
+        await element.waitForDisplayed()
         return element.isDisplayed()
     }
 
-    doGetPageTitle(pageTitle){
-        browser.waitUntil(function(){
+    async doGetPageTitle(pageTitle){
+        await browser.waitUntil(function(){
             return (browser.getTitle() === pageTitle)
         }, 10000, 'title is not displayed after the given time'
     )

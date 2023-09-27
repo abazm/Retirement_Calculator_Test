@@ -1,4 +1,3 @@
-const { assert } = require('console');
 const RetirementPage = require('../pageobjects/retirementPage')
 const tData = require('../testData/constants');
 
@@ -20,7 +19,7 @@ describe('POM - Retirement Calculator Automation Testing', async () => {
     })
 
     afterEach(async function () {
-        await browser.debug()
+        // await browser.debug()
     })
 
 
@@ -30,29 +29,26 @@ describe('POM - Retirement Calculator Automation Testing', async () => {
         it('POM - Pre-retirement calculation Without SSN Benefits and Default Calculator', async () => {
 
             //Verify web application Title as expected            
-             await RetirementPage.VerifyPageTitle(tData.LOGIN_PAGE_TITLE)
+            await RetirementPage.VerifyPageTitle(tData.LOGIN_PAGE_TITLE)
 
-             await RetirementPage.Enter_currentage(current_age)
-             await RetirementPage.Enter_retirementage(retirement_age)
-             await RetirementPage.Enter_currentincome(current_income)
-             await RetirementPage.Enter_spouseincome(spouse_income)
+            await RetirementPage.Enter_currentage(current_age)
+            await RetirementPage.Enter_retirementage(retirement_age)
+            await RetirementPage.Enter_currentincome(current_income)
+            await RetirementPage.Enter_spouseincome(spouse_income)
 
-             await RetirementPage.Enter_currenttotalsavings(current_total_savings)
-             await RetirementPage.Enter_currentannualsavings(current_annual_savings)
+            await RetirementPage.Enter_currenttotalsavings(current_total_savings)
+            await RetirementPage.Enter_currentannualsavings(current_annual_savings)
 
-             await RetirementPage.Enter_savingsincreaserate(savings_increase_rate)
+            await RetirementPage.Enter_savingsincreaserate(savings_increase_rate)
 
-             await RetirementPage.Select_nosocialbenefit()
+            await RetirementPage.Select_nosocialbenefit()
 
-             await RetirementPage.Submit_Calculate()
-            
-             // Verify Result Message
-             assert.equal(true, RetirementPage.VerifyResultMessage(tData.RESULT_MESSAGE), 'Result message not Displayed')
-             await RetirementPage.TakeScreeshot("Final_Result_Message")
+            await RetirementPage.Submit_Calculate()
 
-            //  await RetirementPage.VerifyResultMessage(tData.RESULT_MESSAGE)
+            //Verifying Final Result Message
+            await RetirementPage.VerifyResultMessage(tData.RESULT_MESSAGE)
+            await RetirementPage.TakeScreeshot("Final_Result_Message")
 
-            
         })
 
     })
