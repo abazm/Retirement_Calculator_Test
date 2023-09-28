@@ -25,5 +25,7 @@ Test Report/Results Folders Auto generated:
 	
 To Run Parallel Tests:	
 	Update wdio.conf.js value Maxinstances:number of test to run 
+
+ Set up on need basis in wdio.config.js Levels of execution logging as : trace | debug | info | warn | error | silent
 	
 *Supports Latest Chrome browser version 117.+
