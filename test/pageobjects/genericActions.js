@@ -31,5 +31,5 @@ class GenericActions {
 
 }
 
-module.exports = new GenericActions()
+export default new GenericActions()
 

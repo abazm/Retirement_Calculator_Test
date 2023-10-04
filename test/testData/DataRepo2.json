@@ -1,0 +1,17 @@
+[
+    {
+        "current_age": "55",
+        "retirement_age": "68",
+        "current_income": "200000",
+        "spouse_income": "95000",
+        "current_total_savings": "800000",
+        "current_annual_savings": "12",
+        "savings_increase_rate": "2",
+        "social_security_override": "5000",
+        "additional_income": "1500",
+        "retirement_duration": "18",
+        "retirement_annual_income": "65",
+        "pre_retirement_roi": "9",
+        "post_retirement_roi": "4"
+    }
+]
